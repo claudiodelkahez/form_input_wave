@@ -46,6 +46,7 @@ body {
     font-size: 1.6rem;
     border: 0;
     border-radius: 5px;
+    margin-top: 30px;
 }
 .btn:focus {
     outline: none;
@@ -59,7 +60,7 @@ body {
 
 .form-control {
     position: relative;
-    margin-bottom: 20px 0 40px;
+    margin-bottom: 20px 0px 40px;
     width: 300px;
 }
 .form-control input {
@@ -69,6 +70,7 @@ body {
     display: block;
     width: 100%;
     padding: 15px 0;
+    margin-top: 20px;
     font-size: 1.8rem;
     color: #fff;
 }
@@ -76,4 +78,24 @@ body {
 .form-control input:focus,
 .form-control input:valid {
     outline: none;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 1.8rem;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: lightblue;
+    transform: translateY(-30px);
 }
